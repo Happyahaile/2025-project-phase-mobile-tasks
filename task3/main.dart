@@ -1,6 +1,6 @@
-double calculateDiscount(double price, double discountPercent) {
-  if (price < 0 || discountPercent < 0 || discountPercent > 100) {
+double calculateDiscount(double originalPrice, double discountPercentage) {
+  if (originalPrice < 0 || discountPercentage < 0 || discountPercentage > 100) {
     throw ArgumentError('Invalid input values');
   }
-  return price - (price * (discountPercent / 100));
+  return originalPrice - (originalPrice * (discountPercentage / 100));
 }
